@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ejercicio032;
-import java.util.Scanner;
+import java.util.Scanner;//Pulsar Control + Espacio muestra las clases del import
 /**
  *
  * @author alumno
