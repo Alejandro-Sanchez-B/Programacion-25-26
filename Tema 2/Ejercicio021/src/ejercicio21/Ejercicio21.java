@@ -20,11 +20,11 @@ public class Ejercicio21 {
         int tiempo = entrada.nextInt();
         int segundos = tiempo % 60;
         int minutos = (tiempo % 3600) / 60;
-        int horas = tiempo / 3600;
+        int horas = (tiempo % 86400) / 3600;
+        int dias = tiempo / 86400;
         
         
-        
-        System.out.println(tiempo + " segundos equivalen a " + horas + " horas, " + minutos + " minutos y " + segundos + " segundos");
+        System.out.println(tiempo + " segundos equivalen a " + dias + " dias " + horas + " horas, " + minutos + " minutos y " + segundos + " segundos");
     }
     
 }
