@@ -18,7 +18,7 @@ public class Ejercicio032 {
         System.out.println("Introduzca la cantidad de dinero a calcular");
         int dinero = entrada.nextInt();
         int billetes50 = dinero/50;
-        int billetes20 = (dinero % 50)/20;
+        int billetes20 = (dinero % 50)/20; //Sacamos el resto de la division anterior y lo dividimos por el valor del billete
         int billetes10 = (dinero % 20)/10;
         int billetes5 = (dinero % 10)/5;
         int monedas2 = (dinero % 5)/2;
