@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ejercicio03;
+package ejercicio04;
 import java.util.Scanner; //Importamos la clase
 /**
  *
  * @author alumno
  */
-public class Ejercicio03 {
+public class Ejercicio04 {
 
     /**
      * @param args the command line arguments
@@ -24,15 +24,16 @@ public class Ejercicio03 {
         System.out.println("Introduzca el tercer numero");
         num3 = entrada.nextFloat();
         
-        if ((num1 > num2) && (num1 > num3)) {
-            System.out.println(" El " + num1 + " es el mayor");
+        if ((num1 < num2) && (num1 < num3)) {
+            System.out.println(" El " + num1 + " es el menor");
         
-        }else if ((num2 > num1) && (num2 > num3)){
-            System.out.println(" El " + num2 + " es el mayor");
+        }else if ((num2 < num1) && (num2 < num3)){
+            System.out.println(" El " + num2 + " es el menor");
         }else 
             
-            System.out.println(" El " + num3 + " es el mayor");
+            System.out.println(" El " + num3 + " es el menor");
         
     }
+    }
     
-}
+
