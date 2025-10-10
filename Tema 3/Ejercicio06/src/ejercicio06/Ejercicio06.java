@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ejercicio06;
-import java.util.Scanner;
+import java.util.Scanner;//Importamos la clase Scanner
 /**
  *
  * @author alumno
@@ -14,42 +14,42 @@ public class Ejercicio06 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int nota;
-        boolean suspenso,suficiente,notable,sobresaliente;
-        Scanner entrada = new Scanner (System.in);
-        System.out.println("Introduce tu nota");
-        nota = entrada.nextInt();
-        suspenso = false;
-        suficiente = false;
-        notable = false;
-        sobresaliente = false;
+        int nota; // Creamos una variable para guardar la nota del usuario
+        boolean suspenso,suficiente,notable,sobresaliente; // Creamos una variable para guardar los distintos resultados
+        Scanner entrada = new Scanner (System.in); //Creamos el objeto Scanner para leer los datos
+        System.out.println("Introduce tu nota"); //Pedimos al usuario la nota
+        nota = entrada.nextInt(); //Guardamos la nota en la variable creda anteriormente
+        suspenso = false; // Inicialmente se establece suspenso como falso
+        suficiente = false; // Inicialmente se establece suficiente como falso
+        notable = false; // Inicialmente se establece notable como falso
+        sobresaliente = false; // Inicialmente se establece sobresaliente como falso
         
-        switch (nota){
+        switch (nota){ //// Se evalúa la nota usando una estructura switch
             case 0:
             case 1: 
             case 2:
             case 3:
-            case 4:
-                suspenso = true;
-                System.out.println("Estas suspenso");
-                break;
+            case 4: // Si la nota está entre 0 y 4
+                suspenso = true; //Ponemos el valor de suspenso en true
+                System.out.println("Estas suspenso"); //Mostramos por pantalla el mensaje con el resultado
+                break; //Finalizamos el switch
             case 5:
-            case 6:
-                suficiente = true;
-                System.out.println("Tienes un suficiente");
-                break;
+            case 6:// Si la nota es 5 o 6
+                suficiente = true;//Ponemos el valor de suficiente en true
+                System.out.println("Tienes un suficiente");//Mostramos por pantalla el mensaje con el resultado
+                break;//Finalizamos el switch
             case 7:
-            case 8:
-                notable = true;
-                System.out.println("Tienes un notable");
-                break;
+            case 8: //Si la nota es 7 u 8
+                notable = true;//Ponemos el valor de notable en true
+                System.out.println("Tienes un notable");//Mostramos por pantalla el mensaje con el resultado
+                break;//Finalizamos el switch
             case 9:
-            case 10:
-                sobresaliente = true;
-                System.out.println("Tienes un sobresaliente");
-                break;
-            default:
-                System.out.println("Introduce un valor valido");
+            case 10: //Si la nota es 9 o 10
+                sobresaliente = true;//Ponemos el valor de sobresaliente en true
+                System.out.println("Tienes un sobresaliente");//Mostramos por pantalla el mensaje con el resultado
+                break;//Finalizamos el switch
+            default: //En caso de que el numero no entre dentro de los valores establecidos
+                System.out.println("Introduce un valor valido"); //Mostramos un mensaje de error
                         
         
         }
