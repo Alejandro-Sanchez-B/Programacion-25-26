@@ -14,16 +14,16 @@ public class Ejercicio015 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int nummul,i, resultado;
+        int multiplicar,i, resultado;
         Scanner entrada = new Scanner(System.in);
         
         System.out.println("Introduzca el numero a calcular");
-        nummul = entrada.nextInt();
+        multiplicar = entrada.nextInt();
         
        for(i=0; i<=10; i++){
        
-           resultado = nummul * i;
-            System.out.println(nummul + " multiplicado por " + i + " es igual a " 
+           resultado = multiplicar * i;
+            System.out.println(multiplicar + " multiplicado por " + i + " es igual a " 
             + resultado);
        
        }
