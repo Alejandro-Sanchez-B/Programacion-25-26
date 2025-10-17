@@ -63,8 +63,6 @@ public class Ejercicio027 {
                     }
                     
                     case 4: {
-                       
-                        
                             resultado = num1 / num2;
                             System.out.println("La division de " + num1 + " entre " + num2 + " es: " + resultado);
                             System.out.println("     ");
@@ -72,8 +70,6 @@ public class Ejercicio027 {
                             break;
                        
                        }
-                    
-                    
                     
                     case 5:{
                         System.out.println("Fin del programa");
@@ -87,10 +83,7 @@ public class Ejercicio027 {
                         System.out.println("     ");
                     
                     }
-                    
-                    
-                    
-                    
+                   
                 }
                 
                 
