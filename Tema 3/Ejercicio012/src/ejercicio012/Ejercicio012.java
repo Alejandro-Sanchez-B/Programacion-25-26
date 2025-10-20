@@ -15,18 +15,18 @@ public class Ejercicio012 {
      */
     public static void main(String[] args) {
         
-        int numpar = 11;
-        do{
+        int numpar = 11; //Declaramos la variable que almacene los numeros pares y la inicializamos a 11
+        do{ // Iniciamos el bucle do while 
         
-            if (numpar % 2 == 0){
-                System.out.println(numpar);
-                numpar++;
+            if (numpar % 2 == 0){ //Si el cociente del numero entre 2 es 0
+                System.out.println(numpar); //Mostramos el numero
+                numpar++;//Incrementamos el valor de numpar en 1
             
-            }else {
-                numpar++;
+            }else {//En caso de que no se cumpla
+                numpar++;//Solo incremetamos el valor de numpar en 1
             }
         
-        }while(numpar <=133);
+        }while(numpar <=133); //Mientras numpar sea menor o igual a 133
     
     
     }
