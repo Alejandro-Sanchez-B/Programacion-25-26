@@ -16,13 +16,12 @@ public class Ejercicio022 {
      */
     public static void main(String[] args) {
        float num1,num2,resultado;
-       boolean correcto;
-       correcto = true;
+       
+       
        Scanner entrada = new Scanner(System.in);
-        do {
+        
             
             try {
-                
                 System.out.println("Ingtroduzca el primer numero");
                 num1 = entrada.nextFloat();
                 System.out.println("Introduzca el segundo numero");
@@ -31,17 +30,17 @@ public class Ejercicio022 {
                 resultado = num1+num2;
                 
                 System.out.println("El resultado de sumar " + num1 + " mas " + num2 + " es igual a " + resultado);
-            
+                
             
             }catch (InputMismatchException e){
             
                 System.out.println("Introduzca un valor válido");
-                correcto = false;
+                
             }
         
         
         
-        }while(correcto == false);
+        
     }
     
 }

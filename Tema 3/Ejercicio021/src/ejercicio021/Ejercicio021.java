@@ -16,20 +16,18 @@ public class Ejercicio021 {
     public static void main(String[] args) {
         
         int num1,num2, resultado;
-        boolean correcto = true;
+        boolean correcto;
         Scanner entrada = new Scanner(System.in);
         do {
-        
+             System.out.println("Introduzca el primer numero");
+             num1 = entrada.nextInt();
+                
+             System.out.println("Introduzca el segundo numero");
+             num2 = entrada.nextInt();
             try {
-                System.out.println("Introduzca el primer numero");
-                num1 = entrada.nextInt();
-                
-                System.out.println("Introduzca el segundo numero");
-                num2 = entrada.nextInt();
-                
-                resultado = num1 / num2;
+               resultado = num1 / num2;
                 System.out.println("La division entre " + num1 + " y " + num2 + " es igual a " + resultado);
-
+                correcto = true;
 
             }catch (ArithmeticException e){
                 System.out.println("Introduce un numero distinto a 0");

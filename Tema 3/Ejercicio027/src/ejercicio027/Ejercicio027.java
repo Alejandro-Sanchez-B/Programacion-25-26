@@ -28,7 +28,7 @@ public class Ejercicio027 {
 
                 System.out.println("Introduzca el segundo numero");
                 num2 = entrada.nextInt();//Pedimos el segundo numero
-
+                
                 do { //Creamos un bucle do while para repetir el menu hasta que el usuario pulse 5
                     System.out.println("Seleccione una opcion");
                     System.out.println("1: Suma");
@@ -43,6 +43,8 @@ public class Ejercicio027 {
 
                         case 1: { //En la primera opcion, hacemos una suma
                             resultado = num1 + num2;
+                            System.out.println("     ");
+                            System.out.println("     ");
                             System.out.println("La suma de " + num1 + " mas " + num2 + " es: " + resultado);
                             System.out.println("     ");
                             System.out.println("     ");
@@ -51,6 +53,8 @@ public class Ejercicio027 {
                         }
                         case 2: { //En la segunda opcion hacemos una resta
                             resultado = num1 - num2;
+                            System.out.println("     ");
+                            System.out.println("     ");
                             System.out.println("La resta de " + num1 + " menos " + num2 + " es: " + resultado);
                             System.out.println("     ");
                             System.out.println("     ");
@@ -58,6 +62,8 @@ public class Ejercicio027 {
                         }
                         case 3:{ //En la tercera opcion hacemos una multiplicacion
                             resultado = num1 * num2;
+                            System.out.println("     ");
+                            System.out.println("     ");
                             System.out.println("La multiplicacion de " + num1 + " por " + num2 + " es: " + resultado);
                             System.out.println("     ");
                             System.out.println("     ");
@@ -66,6 +72,8 @@ public class Ejercicio027 {
 
                         case 4: { //En la cuarta opcion hacemos una division
                                 resultado = num1 / num2;
+                                System.out.println("     ");
+                                System.out.println("     ");
                                 System.out.println("La division de " + num1 + " entre " + num2 + " es: " + resultado);
                                 System.out.println("     ");
                                 System.out.println("     ");
@@ -79,7 +87,8 @@ public class Ejercicio027 {
                         }
 
                         default:{ //Si el numero no entra en las opciones, mandamos un mensaje de error
-
+                            System.out.println("     ");
+                            System.out.println("     ");
                             System.out.println("Por favor seleccione una opcion valida");
                             System.out.println("     ");
                             System.out.println("     ");
@@ -98,8 +107,7 @@ public class Ejercicio027 {
             }catch(InputMismatchException e){ //Capturamos la excepcion de introducir un valor no correcto
                 System.out.println("Introduce un valor válido");
                 
-            }catch (ArithmeticException e){ //Capturamos el error de dividir por 0
-                 System.out.println("No se puede dividir por 0");}
+            
                  
             } 
         
