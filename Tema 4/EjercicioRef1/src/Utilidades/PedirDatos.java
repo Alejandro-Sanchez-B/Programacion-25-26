@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Utilidades;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -10,6 +11,7 @@ import java.util.Scanner;
  * @author alumno
  */
 public class PedirDatos {
+<<<<<<< HEAD
     
     
      
@@ -27,4 +29,25 @@ public class PedirDatos {
             
     }
     
+=======
+
+
+  public static int pedirNumero() {
+    int num = 0;
+    boolean prueba;
+    do{
+        try{
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Introduce un numero");
+        num = entrada.nextInt();
+        prueba = true;
+        } catch(InputMismatchException e){
+            System.out.println("Introduce un valor valido");
+            prueba = false;
+        }
+    }while (prueba == false);
+    return num;
+    
+  }
+>>>>>>> 99a9e4fd08c62de89e5eafaa98dc3efe9a415cb8
 }

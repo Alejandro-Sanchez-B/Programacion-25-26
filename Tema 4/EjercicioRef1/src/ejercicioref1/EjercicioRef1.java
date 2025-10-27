@@ -4,31 +4,36 @@
  */
 package ejercicioref1;
 import Utilidades.PedirDatos;
+<<<<<<< HEAD
 
+=======
+//import java.util.Scanner;
+>>>>>>> 99a9e4fd08c62de89e5eafaa98dc3efe9a415cb8
 /**
  *
  * @author alumno
  */
 public class EjercicioRef1 {
-    public static void saludo () {
     
-        System.out.println("Hola mundo");
-    }
-    
-    public static void saludoConParametro(int num){
-    
-        System.out.println("Hola Mundo " + num);
-    }
+//    public static void saludo () {
 //    
-//    public static void suma (int num1, int num2){
-//        System.out.println("La suma de " + num1 + " mas "+ num2 + " es igual a " + (num1 +num2));
+//        System.out.println("Hola mundo");
+//    }
+//    
+//    public static void saludoConParametro(int num){
+//    
+//        System.out.println("Hola Mundo " + num);
+//    }
+////    
+////    public static void suma (int num1, int num2){
+////        System.out.println("La suma de " + num1 + " mas "+ num2 + " es igual a " + (num1 +num2));
+////    
+////    }
+//    
+//    public static int sumadevuelta(int num1, int num2){
+//        return num1 +num2;
 //    
 //    }
-    
-    public static int sumadevuelta(int num1, int num2){
-        return num1 +num2;
-    
-    }
     /**
      * @param args the command line arguments
      */
@@ -36,15 +41,40 @@ public class EjercicioRef1 {
         
         PedirDatos.main();
         
+<<<<<<< HEAD
         Calculadora.suma();
         
+=======
+        int num1;
+        int num2;
+        double resultado;
+>>>>>>> 99a9e4fd08c62de89e5eafaa98dc3efe9a415cb8
         
 //        suma(num1,num2);
 //        saludo();
 //        saludoConParametro(5);
-        System.out.println("La suma de los dos numero es " + sumadevuelta(num1, num2));
+//        System.out.println("La suma de los dos numero es " + sumadevuelta(num1, num2));
         
         
+<<<<<<< HEAD
+=======
+       num1 = PedirDatos.pedirNumero();
+       num2 = PedirDatos.pedirNumero();
+       try{
+        resultado = Calculadora.suma(num1,num2);
+        System.out.println("La suma de " + num1 + " + " + num2 + " es igual a: " + resultado);
+        resultado = Calculadora.resta(num1,num2);
+        System.out.println("La resta de " + num1 + " - " + num2 + " es igual a: " + resultado);
+        resultado = Calculadora.multiplicacion(num1,num2);
+        System.out.println("La multiplicacion de " + num1 + " * " + num2 + " es igual a: " + resultado);
+        resultado = Calculadora.division(num1,num2);
+        System.out.println("La division de " + num1 + " / " + num2 + " es igual a: " + resultado);
+        resultado = Calculadora.RaizCuadrada(num1);
+        System.out.println("La raiz cuadrada de " + num1 + "es igual a " + resultado);
+       }catch (ArithmeticException e){
+           System.out.println("Ha ocurrido un error");
+       }
+>>>>>>> 99a9e4fd08c62de89e5eafaa98dc3efe9a415cb8
     }
     
     
