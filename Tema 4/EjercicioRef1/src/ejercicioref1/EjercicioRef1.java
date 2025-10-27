@@ -4,11 +4,11 @@
  */
 package ejercicioref1;
 import Utilidades.PedirDatos;
-<<<<<<< HEAD
 
-=======
+
+
 //import java.util.Scanner;
->>>>>>> 99a9e4fd08c62de89e5eafaa98dc3efe9a415cb8
+
 /**
  *
  * @author alumno
@@ -41,14 +41,14 @@ public class EjercicioRef1 {
         
         PedirDatos.main();
         
-<<<<<<< HEAD
-        Calculadora.suma();
+
+        //Calculadora.suma();
         
-=======
+
         int num1;
         int num2;
         double resultado;
->>>>>>> 99a9e4fd08c62de89e5eafaa98dc3efe9a415cb8
+
         
 //        suma(num1,num2);
 //        saludo();
@@ -56,8 +56,7 @@ public class EjercicioRef1 {
 //        System.out.println("La suma de los dos numero es " + sumadevuelta(num1, num2));
         
         
-<<<<<<< HEAD
-=======
+
        num1 = PedirDatos.pedirNumero();
        num2 = PedirDatos.pedirNumero();
        try{
@@ -74,7 +73,7 @@ public class EjercicioRef1 {
        }catch (ArithmeticException e){
            System.out.println("Ha ocurrido un error");
        }
->>>>>>> 99a9e4fd08c62de89e5eafaa98dc3efe9a415cb8
+
     }
     
     

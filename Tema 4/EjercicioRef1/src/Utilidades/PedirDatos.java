@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author alumno
  */
 public class PedirDatos {
-<<<<<<< HEAD
+
     
     
      
@@ -29,7 +29,7 @@ public class PedirDatos {
             
     }
     
-=======
+
 
 
   public static int pedirNumero() {
@@ -49,5 +49,5 @@ public class PedirDatos {
     return num;
     
   }
->>>>>>> 99a9e4fd08c62de89e5eafaa98dc3efe9a415cb8
+
 }
