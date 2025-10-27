@@ -4,7 +4,7 @@
  */
 package ejercicioref1;
 import Utilidades.PedirDatos;
-import java.util.Scanner;
+
 /**
  *
  * @author alumno
@@ -34,7 +34,9 @@ public class EjercicioRef1 {
      */
     public static void main(String[] args) {
         
+        PedirDatos.main();
         
+        Calculadora.suma();
         
         
 //        suma(num1,num2);
@@ -42,7 +44,7 @@ public class EjercicioRef1 {
 //        saludoConParametro(5);
         System.out.println("La suma de los dos numero es " + sumadevuelta(num1, num2));
         
-        Calculadora.suma(num1 , num2);
+        
     }
     
     
