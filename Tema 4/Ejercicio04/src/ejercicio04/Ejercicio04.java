@@ -2,20 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ejercicicio03;
+package ejercicio04;
 import java.util.Scanner;
-import Ordenacion.Ordenacion;
+
 /**
  *
  * @author Alex
  */
-public class Ejercicicio03 {
+public class Ejercicio04 {
 
     /**
      * @param args the command line arguments
      */
-    
-   
     public static void main(String[] args) {
         float num1, num2,num3, resultado;
         
@@ -28,7 +26,8 @@ public class Ejercicicio03 {
         num3 = entrada.nextFloat();
         
         resultado = Ordenacion.Ordenar(num1, num2, num3);
-        System.out.println("El numero mayor es: " + resultado);    
+        System.out.println("El numero menor es: " + resultado); 
+        
     }
     
 }

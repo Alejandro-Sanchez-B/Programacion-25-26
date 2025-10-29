@@ -33,20 +33,16 @@ public class PedirDatos {
 
 
   public static int pedirNumero() {
-    int num = 0;
-    boolean prueba;
-    do{
-        try{
+    int num;
+    
+    
+       
         Scanner entrada = new Scanner(System.in);
         System.out.println("Introduce un numero");
         num = entrada.nextInt();
-        prueba = true;
-        } catch(InputMismatchException e){
-            System.out.println("Introduce un valor valido");
-            prueba = false;
-        }
-    }while (prueba == false);
-    return num;
+       
+     
+        return num;
     
   }
 
