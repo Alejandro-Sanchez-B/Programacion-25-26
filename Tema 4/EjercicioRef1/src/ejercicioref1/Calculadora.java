@@ -56,9 +56,45 @@ public class Calculadora {
       * @param num1
       * @return la raiz cuadrada
       */
-     public static double RaizCuadrada(int num1){
-     return Math.sqrt(num1);
+     public static double raizCuadrada(int num1){
+        return Math.sqrt(num1);
      }
-     
-
+     /**
+      * Método para calcular un numero pasado por parámetro a otro que nos pase el usuario tambien por parametro
+      * @param num1
+      * @param num2
+      * @return El exponente del segundo numero elevado al primero
+      */
+    public static double potencia (int num1, float num2) {
+        return Math.pow(num1, num2);
+    }
+    /**
+     * Metodo para redondear un numero pasado por parámetro
+     * @param num1
+     * @return Un número entero redondeado
+     */
+    public static int redondeo (float num1){
+        return Math.round(num1);
+    
+    }
+    /**
+     * Método que devuelve el máyor entre dos numero decimales
+     * @param num1
+     * @param num2
+     * @return El mayor de los dos numeros
+     */
+    public static float mayor (float num1, float num2){
+        return Math.max(num1, num2);
+    
+    }
+    /**
+     * Método que devuelve el emnor de dos numeros decimales
+     * @param num1
+     * @param num2
+     * @return El menor de los dos números
+     */
+    public static float menor (float num1, float num2){
+        return Math.min(num1, num2);
+    }
+    
 }
