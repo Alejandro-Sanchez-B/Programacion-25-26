@@ -78,7 +78,7 @@ public class Calculadora {
     
     }
     /**
-     * Método que devuelve el máyor entre dos numero decimales
+     * Método que devuelve el mayor entre dos numero decimales
      * @param num1
      * @param num2
      * @return El mayor de los dos numeros
@@ -88,7 +88,7 @@ public class Calculadora {
     
     }
     /**
-     * Método que devuelve el emnor de dos numeros decimales
+     * Método que devuelve el menor de dos numeros decimales
      * @param num1
      * @param num2
      * @return El menor de los dos números
