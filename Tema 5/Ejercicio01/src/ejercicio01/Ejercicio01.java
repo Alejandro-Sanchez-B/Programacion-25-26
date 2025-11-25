@@ -14,7 +14,25 @@ public class Ejercicio01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Coche miCoche = new Coche ("Volvo", "Tx" , "Morado" , 0, false);
+        Coche cochePadre = new Coche ("Toyota", "XS67" , "Verde" , 0, false);
+        miCoche.arrancarCoche();
+        cochePadre.arrancarCoche();
+        miCoche.acelerarCoche();
+        miCoche.acelerarCoche();
+        miCoche.acelerarCoche();
+        miCoche.acelerarCoche();
+        miCoche.acelerarCoche();
+        miCoche.acelerarCoche();
+        miCoche.frenarCoche();
+        miCoche.frenarCoche();
+        cochePadre.acelerarCoche();
+        cochePadre.acelerarCoche();
+        cochePadre.acelerarCoche();
+        cochePadre.apagarCoche();
+        miCoche.obtenerEstado();
+        System.out.println("    ");
+        cochePadre.obtenerEstado();
     }
     
 }
