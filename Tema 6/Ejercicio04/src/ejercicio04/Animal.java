@@ -34,7 +34,7 @@ public abstract class Animal {
     }
     
     
-     public float gePeso () {
+     public float getPeso () {
         return this.peso;
     }
     
