@@ -14,7 +14,7 @@ public class Ejercicio05 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      Mamifero mamifero;
+      
        
       Murcielago bobby = new Murcielago ("Bobby", "Macho" , "Verde", 4, 5.6f);
        
@@ -34,7 +34,7 @@ public class Ejercicio05 {
       susan.incubarHuevo();
       susan.mostrarNumHuevos();
       
-      
+      Mamifero mamifero;
       mamifero = new Murcielago ("Loreen", "Hembra", "Negro", 17, 21.3f);
         System.out.println(mamifero.toString());
         
