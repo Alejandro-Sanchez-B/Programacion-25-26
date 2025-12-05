@@ -8,8 +8,32 @@ package ejercicio03;
  *
  * @author alumno
  */
-public class FiguraGeometrica {
+public abstract class FiguraGeometrica {
     private String color;
     
+    public FiguraGeometrica () {
+        this.color = "";    
+    }
+    public FiguraGeometrica (String color) {
+        this.color = color;    
+    }
+    
+    public String getColor (){    
+        return this.color;
+    }
+    
+    public void setColor (String color) {
+        this.color = color;
+    }
+    
+    public abstract void calcularArea();
+    public abstract void calcularPerimetro();
+    
+    @Override
+    
+    public String toString (){
+    
+     return color;
+    } 
     
 }
