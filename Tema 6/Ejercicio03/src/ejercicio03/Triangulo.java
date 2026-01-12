@@ -45,19 +45,19 @@ public abstract class Triangulo  extends FiguraGeometrica{
     }
     //Métodos
 
-        @Override
-        public void calcularArea() {
-            double area;
-            area = (base * altura) / 2;
-            System.out.println(area);
-        }
+    @Override
+    public void calcularArea() {
+        double area;
+        area = Math.round((base * altura) / 2);
+        System.out.println(area);
+    }
 
        
     //toString
-        @Override
-        public String toString () {
-            return super.getColor() + base + altura;
-        }
+    @Override
+    public String toString () {
+        return super.getColor() + base + altura;
+    }
     
     
     

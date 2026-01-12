@@ -14,7 +14,8 @@ public class Ejercicio03 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        FiguraGeometrica triangulo1 = new TrianguloRectangulo ("Verde", 9.6f,5.2f);
+        triangulo1.calcularArea();
     }
     
 }
