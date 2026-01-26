@@ -30,7 +30,7 @@ public class Ejercicio017 {
          int aux;
          for(int i = 0; i < ordenados.length ; i++){
              for(int j = 0; j < ordenados.length -1; j++){
-                 if(ordenados[j] > ordenados [j + 1]){
+                 if(ordenados[j] < ordenados [j + 1]){
                      aux = ordenados[j];
                      ordenados[j] = ordenados [j + 1];
                      ordenados [j + 1] = aux;
