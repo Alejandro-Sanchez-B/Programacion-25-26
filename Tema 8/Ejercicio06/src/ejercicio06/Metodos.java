@@ -48,7 +48,7 @@ public class Metodos {
 
         int horas = empleado.getHoras();
         float tarifa = empleado.getTarifa();
-        float sueldo = 0;
+        float sueldo;
 
         if (horas <= 40) {
             sueldo = horas * tarifa;

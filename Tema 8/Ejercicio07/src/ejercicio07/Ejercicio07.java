@@ -97,9 +97,9 @@ public class Ejercicio07 {
         
         do{
             mostrarMenu();
-            menu = pedirNumero(); //Guardamos en una variable el número del menú pedido al usuario
+            menu = pedirNumero(); 
             
-            switch(menu) { //Creamios un menu switch
+            switch(menu) {
                 case 1: { 
                     rellenarArray(temperaturasmes, dias);
                     break;
@@ -121,12 +121,12 @@ public class Ejercicio07 {
                 }
                 
                 case 5:{
-                System.out.println("Fin del programa"); //Finalizamos el programa
+                System.out.println("Fin del programa"); 
                     break;
                 
                 }
                 
-                default: { //En caso de no pulsar una opcion válida, se le indicará
+                default: { 
                     System.out.println("  ");
                     System.out.println("  ");
                     System.out.println("Por favor, introduzca una opcion válida");
@@ -142,7 +142,7 @@ public class Ejercicio07 {
         
         
         
-        }while(menu != 5); //Se seguirá el programa hasta que el usuario pulse salir
+        }while(menu != 5); 
         
     }
     
