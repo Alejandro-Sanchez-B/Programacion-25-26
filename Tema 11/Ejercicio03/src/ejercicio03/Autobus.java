@@ -9,14 +9,20 @@ import java.util.Map;
 
 /**
  *
- * @author alumno
+ * @author Alex
  */
 public class Autobus {
     private String matricula;
-    private Map <String, String> conductores = new HashMap<>(); 
+    private Map <String, String> conductorAsig;
+    
+    public Autobus() {
+        this.matricula = "";
+        this.conductorAsig = new HashMap<>();
+    }
 
-    public Autobus(String matricula) {
+    public Autobus(String matricula, Map<String, String> conductorAsig) {
         this.matricula = matricula;
+        this.conductorAsig = conductorAsig;
     }
 
     public String getMatricula() {
@@ -27,18 +33,19 @@ public class Autobus {
         this.matricula = matricula;
     }
 
-    public Map<String, String> getConductores() {
-        return conductores;
+    public Map<String, String> getConductorAsig() {
+        return conductorAsig;
     }
 
-    public void setConductores(Map<String, String> conductores) {
-        this.conductores = conductores;
+    public void setConductorAsig(Map<String, String> conductorAsig) {
+        this.conductorAsig = conductorAsig;
     }
 
     @Override
     public String toString() {
-        return "Autobus{" + "matricula=" + matricula + ", conductores=" + conductores + '}';
+        return "Autobus{" + "matricula=" + matricula + ", conductorAsig=" + conductorAsig + '}';
     }
-    
+
+   
     
 }

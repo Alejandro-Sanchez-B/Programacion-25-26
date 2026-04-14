@@ -6,17 +6,16 @@ package ejercicio03;
 
 /**
  *
- * @author alumno
+ * @author Alex
  */
 public class Conductor {
     private String dni;
     private String nombre;
     
-     public Conductor() {
+    public Conductor() {
         this.dni = "";
         this.nombre = "";
     }
-    
 
     public Conductor(String dni, String nombre) {
         this.dni = dni;
@@ -43,7 +42,6 @@ public class Conductor {
     public String toString() {
         return "Conductor{" + "dni=" + dni + ", nombre=" + nombre + '}';
     }
-
     
     
     

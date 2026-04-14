@@ -6,7 +6,7 @@ package ejercicio03;
 
 /**
  *
- * @author alumno
+ * @author Alex
  */
 public class Ejercicio03 {
 
@@ -14,7 +14,7 @@ public class Ejercicio03 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Autobus autobuses [] = new Autobus [6];
+        // TODO code application logic here
     }
     
 }
