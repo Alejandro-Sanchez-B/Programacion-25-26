@@ -13,43 +13,128 @@ import java.util.Scanner;
  */
 public class Metodos {
     
-    public static String pedirString (){
-        Scanner entrada = new Scanner (System.in);
-        return entrada.nextLine();
-    }
-    
-    public static int pedirInt (){
-        Scanner entrada = new Scanner (System.in);
-        return entrada.nextInt();
-    }
-    public static void aparcarBus (Autobus autobuses []){
-        boolean comprobar = false;
-         do{
+  
+    public static int pedirPosicion(Autobus [] autobuses){
+        Scanner entrada = new Scanner(System.in);
+        int posicion = -1;
+        boolean error;
+        do{
+            error = false;
             try{
-                System.out.println("Por favor, se√±ale la d√°rsena (1-6)"); //Solicitamos al usuario que nos indique la posici√≥n
-                int posicion = pedirInt() - 1;
-                    if( posicion < 0 || posicion > autobuses.length ){ //Si la posici√≥n est√° fuera del rango se lo indicamos
-                        System.out.println("Esa d√°rsena no existe");
-
-                    }else if (autobuses[posicion] != null){  //Si la posicion ya est√° ocupada se lo indicamos 
-                        System.out.println("Esa d√°rsena est√° ocupada");
-
-                    }else{ //Si no est√° ocupada y entra dentro del rango ponemos comprobar a true y creamos un nuevo objeto
-                        System.out.println("Por favor, indique su nombre");
-                        String titular = pedirString();
-                        System.out.println("Por favor, indique la matricula de su coche");
-                        String matricula = pedirString();
-                        coches[posicion] = new Coche (titular, matricula);
-                        comprobar = true;                
-
-                   }
-
-           }catch (InputMismatchException e){ //Nos aseguramos de que nos introducen un entero
-                System.out.println("introduzca un tipo de dato v√°lido");       
-                        }
-        }while (!comprobar); //Seguimos el bucle mientras comprobar sea false
-        }
-         
+                System.out.println("PosiciÛn: ");
+                posicion = entrada.nextInt();
+            }
+            catch(InputMismatchException e){
+                System.out.println("Debe introducir un n˙mero.");
+                entrada.next();  //Limpiar buffer
+                error = true;
+            }
+            //Si nos salimos del rango del vector
+            if  ((posicion < 0)||(posicion >= autobuses.length)){
+                error = true;
+            }
+        }while(error == true);
+        return posicion;
+    } 
     
+    public static Autobus pedirAutobus(){
+        Scanner entrada = new Scanner(System.in);
+        String matricula;
+        Autobus autobus;
+        System.out.print("MatrÌcula: ");
+        matricula = entrada.nextLine();
+        autobus = new Autobus(matricula);
+        autobus.insertarConductores();
+        return autobus;
     }
+    public static void aparcar(Autobus [] autobuses){
+        int posicion;
+        Autobus autobus;
+        do{
+            posicion = pedirPosicion(autobuses);
+            if  (autobuses[posicion] != null){
+                System.out.println("PosiciÛn "+posicion+" ocupada");
+            }
+        }while(autobuses[posicion] != null);
+        autobus = pedirAutobus();
+        autobuses[posicion] = autobus;
+    }
+    public static void mostrarLibres(Autobus [] autobuses){
+        System.out.println("D·rsenas libres: ");
+        for(int i = 0; i < autobuses.length;i++){
+            if  (autobuses[i] == null){
+                System.out.print("["+i+"]");
+            }
+        }
+        System.out.print("\n");  //Salto de lÌnea
+    }
+    
+    public static void buscarAutobus(String matricula, Autobus[] autobuses){
+        int i = 0;
+        boolean encontrado = false;
+        while((!encontrado)&&(i < autobuses.length)){
+            if (autobuses[i] != null){  //Si est· ocupada la celda
+                if  (matricula.equalsIgnoreCase(autobuses[i].getMatricula())){
+                    encontrado = true;
+                }
+            }
+            i++;
+        }
+        if  (encontrado){
+            autobuses[i-1].mostrarAutobus();
+        }
+        else{
+            System.out.println("No existe autob˙s con la matrÌcula "+matricula);
+        }
+    }
+    
+    public static void mostrarMatricula(Autobus[] autobuses, String dni){
+        int i = 0;
+        boolean encontrado = false;
+        while((!encontrado)&&(i < autobuses.length)){
+            try{
+                encontrado = autobuses[i].buscarConductor(dni);
+                if  (encontrado){
+                    System.out.println("El conductor con dni "+dni+" tiene asignado el autob˙s "+autobuses[i].getMatricula());
+                }
+            }
+            catch(NullPointerException e){
+                System.out.println("No hay ning˙n autob˙s aparcado en la celda " + i);
+            }
+            finally{
+                i++;
+            }
+        }
+       if  (!encontrado){
+            System.out.println("No existe el conductor con DNI: "+dni);
+        }
+    }
+    
+    
+    public static int PosicionBusMasConductores(Autobus[] autobuses){
+        int mayor, posicion = 0;
+        try{
+            mayor = autobuses[0].getNumConductores();
+        }
+        catch(NullPointerException e){
+            mayor = 0;  
+            //Lo correcto serÌa BUSCAR la primera posiciÛn ocupada para llamar al getNumConductores() para esa posiciÛn
+        }
+        for(int i = 1;i < autobuses.length;i++){
+            if  (autobuses[i] != null){
+                if  (autobuses[i].getNumConductores() > mayor){
+                    mayor = autobuses[i].getNumConductores();
+                    posicion = i;
+                }
+            }
+        }
+        return posicion;
+    }
+    
+    
+
 }
+        
+    
+    
+
