@@ -2,14 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ejercicio06;
+package ejercicio07;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-
+/**
+ *
+ * @author Alex
+ */
 public class Campania {
+   
     private String nombre;
     private Set<Donacion> cDonaciones;
 
@@ -31,7 +35,7 @@ public class Campania {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
     public Set<Donacion> getcDonaciones() {
         return cDonaciones;
     }
@@ -39,13 +43,14 @@ public class Campania {
     public void setcDonaciones(Set<Donacion> cDonaciones) {
         this.cDonaciones = cDonaciones;
     }
-        
+    
     public void insDonacion(Donacion nDonacion){
         this.cDonaciones.add(nDonacion);
     }
     
-    public void mostrarDonaciones(){
+    public void mostrarCampania(){
         Iterator<Donacion> it = this.cDonaciones.iterator();
+        System.out.println("Campaña: "+this.nombre);
         Donacion aux;
         while(it.hasNext()){
             aux = it.next();
@@ -56,66 +61,36 @@ public class Campania {
     public void mostrarDonacionesPorNombre(String nombre){
         Iterator<Donacion> it = this.cDonaciones.iterator();
         Donacion aux;
-        boolean enc = false;
-        while(it.hasNext() ){
+        while(it.hasNext()){
             aux = it.next();
             if  (aux.getDonante().equalsIgnoreCase(nombre)){
                 aux.mostrarDonacion();
-                enc = true;
             }
         }
-        if  (!enc){
-            System.out.println("Ninguna donación para el donante "+nombre);
-        }
     }
     
-    public int getNumeroDonaciones(){
-        return this.cDonaciones.size();
-    }
-    
-    public int getTotalRecaudado(){
+    public int getTotalRecaudadoEnCampania(){
         Iterator<Donacion> it = this.cDonaciones.iterator();
         Donacion aux;
         int total = 0;
         while(it.hasNext()){
             aux = it.next();
-            total = total + aux.getImporte();
+            total = total + aux.getImporteDonacion();
         }
         return total;
     }
     
-    public void ordenarDonaciones(){
-        Donacion[] vDonaciones = new Donacion[this.cDonaciones.size()];
-        
+    public Donacion getMayorDonacionEnCampania(){
+        Donacion auxDonacion, mayDonacion = null;
+        int importeMayorDonacion = 0;
         Iterator<Donacion> it = this.cDonaciones.iterator();
-        Donacion aux;
         while(it.hasNext()){
-            aux = it.next();
-            insertarDonacionEnOrden(vDonaciones, aux);
-        }
-        
-        for(int i = 0;i < vDonaciones.length;i++){
-            vDonaciones[i].mostrarDonacion();
-        }
-    }
-
-    
-    private void insertarDonacionEnOrden(Donacion[] vDonaciones, Donacion nDonacion){
-        int i = 0;
-        boolean enc = false;
-        while((vDonaciones[i] != null)&&(!enc)){
-            if  (nDonacion.getImporte() > vDonaciones[i].getImporte()){
-                enc = true;
-            }
-            else{
-                i++;
+            auxDonacion = it.next();
+            if  (auxDonacion.getImporteDonacion() > importeMayorDonacion){
+                importeMayorDonacion = auxDonacion.getImporteDonacion();
+                mayDonacion = auxDonacion;
             }
         }
-        if  (vDonaciones[i] != null){
-            for(int j = vDonaciones.length - 1; j > i;j--){
-                vDonaciones[j] = vDonaciones[j-1];
-            }
-        }
-        vDonaciones[i] = nDonacion;
+        return mayDonacion;
     }
 }

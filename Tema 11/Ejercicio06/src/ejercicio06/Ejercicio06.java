@@ -12,7 +12,6 @@ import java.util.Scanner;
  * @author Alex
  */
 public class Ejercicio06 {
-    /* Pide y retorna la opción del menú */
     public static int pedirOpcionMenu(){
         Scanner teclado = new Scanner(System.in);
         int opc;
@@ -22,12 +21,11 @@ public class Ejercicio06 {
         }
         catch(InputMismatchException e){
             opc = 0;
-            teclado.next();  //Limpiamos el buffer
+            teclado.next();  
         }
         return opc;
     }
 
-    /* Pide y retorna el nombre introducido por el usuario */
     public static String pedirNombre(String mensaje){
         Scanner teclado = new Scanner(System.in);
         String nombre;
@@ -36,7 +34,6 @@ public class Ejercicio06 {
         return nombre;
     }
 
-    /* Pide y retorna el importe introducido por el usuario */
     public static int pedirImporte(){
         Scanner teclado = new Scanner(System.in);
         int importe;
@@ -46,7 +43,7 @@ public class Ejercicio06 {
         }
         catch(InputMismatchException e){
             importe = 0;
-            teclado.next();  //Limpiamos el buffer
+            teclado.next();  
         }
         return importe;
     }
@@ -72,9 +69,7 @@ public class Ejercicio06 {
                 case 1:
                     nombre = pedirNombre("Nombre Donante: ");
                     importe = pedirImporte();
-                    //Cremoa la nueva Donación a partir de los datos que hemos pedido
                     aux = new Donacion(nombre, importe);
-                    //Insertamos la nueva actividad en la vivienda
                     C.insDonacion(aux);
                     break;
                 case 2:

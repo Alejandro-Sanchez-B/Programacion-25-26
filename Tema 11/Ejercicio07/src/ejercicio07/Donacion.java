@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ejercicio06;
+package ejercicio07;
 
 /**
  *
@@ -10,17 +10,17 @@ package ejercicio06;
  */
 public class Donacion {
     private String donante;
-    private int importe;
+    private int importeDonacion;
 
 
     public Donacion() {
         this.donante = "";
-        this.importe = 0;
+        this.importeDonacion = 0;
     }
     
-    public Donacion(String donante, int importe) {
+    public Donacion(String donante, int importeDonacion) {
         this.donante = donante;
-        this.importe = importe;
+        this.importeDonacion = importeDonacion;
     }
 
     public String getDonante() {
@@ -31,16 +31,16 @@ public class Donacion {
         this.donante = donante;
     }
 
-    public int getImporte() {
-        return importe;
+    public int getImporteDonacion() {
+        return importeDonacion;
     }
 
-    public void setImporte(int importe) {
-        this.importe = importe;
+    public void setImporteDonacion(int importeDonacion) {
+        this.importeDonacion = importeDonacion;
     }
         
     public void mostrarDonacion(){
-        System.out.println("    Nombre de Donante: "+this.donante);
-        System.out.println("    Aportacion: "+this.importe);
+        System.out.println("    Donante: "+this.donante);
+        System.out.println("    Importe: "+this.importeDonacion);
     }
 }
